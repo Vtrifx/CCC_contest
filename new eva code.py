@@ -28,6 +28,7 @@ def find(y,x,dy,dx,n,turn=False): #n is pointer (index)
     if n == 0:
         for i,m in hor+dia:
             find(y + i, x + m, i, m, n + 1, False)
+        return #QUIT here as we already stepped in all possible directions otherwise we will double step
 
     #check if the cordinates turned.
     if turn == True:
